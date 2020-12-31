@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace ClassLibrary {
-    class AirVehicle : IVehicle {
+    public class AirVehicle : IVehicle {
         public int HorsePower { get; }
         public IVehicle.FuelType Fuel { get; }
         public IEnvironment CurrentEnvironment { get; private set; } = Environments.Land;

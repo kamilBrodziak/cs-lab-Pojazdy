@@ -15,7 +15,6 @@ namespace ClassLibrary {
             Fuel = fuel;
             WheelCount = wheelCount;
         }
-
         public override string ToString() {
             var vehicle = ((IVehicle)this);
             var unit = CurrentEnvironment.Unit;

@@ -20,6 +20,15 @@ namespace ClassLibrary {
             }
 
         }
+
+        public int ConvertUnitToKmh() {
+            if(CurrentEnvironment.Type == IEnvironment.Types.Air) {
+                return (int)(Speed * 3.6);
+            } else if(CurrentEnvironment.Type == IEnvironment.Types.Sea) {
+                return (int)(Speed * 1.852);
+            }
+            return Speed;
+        }
         public void Start() {
             IncreaseSpeed(CurrentEnvironment.MinSpeed);
         }
